@@ -11,5 +11,60 @@
 \begin{document}
 \maketitle
 
+\begin{enumerate}
+    \item If $r$ is rational ($r \neq 0$) and $x$ is irrational, prove that $r + x$ and $rx$ are irrational.
+    
+    $\textbf{Answer:}$ Assume otherwise that $r + x$ is rational with sum $\alpha$. We write $r + x = \alpha \implies x = \alpha - r$. This implies that $x$
+    can be expressed as the difference of two rational rational numbers, $\alpha - r$, which is rational. Thus, $r + x$ must be irrational. $\rightarrow \leftarrow$
+
+    We follow a similar argument for the second part. Assume otherwise that $rx$ is rational with product $\frac{\beta}{\gamma}$. We write $rx = \frac{\beta}{\gamma} \implies x = \frac{\frac{\beta}{\gamma}}{r}$. This
+    implies that $x$ can be expressed as a (compound) fraction, which is violates the irrational property. Thus, $rx$ must be irrational. $\rightarrow \leftarrow$
+
+    \item Prove that there is no rational number whose square is 12.
+    
+    $\textbf{Answer:}$ Assume otherwise that there exists a rational $p = \frac{m}{n}$ for $m,n$ not both even, such that:
+
+    \[p^2 = 12\]
+
+    We can re-arrange as follows:
+    
+    \[\left(\frac{m}{n}\right)^2 = 12\]
+
+    \[m^2 = 12n^2\]
+
+    Since $12$ is even, and the product of two terms involving an even number is always even, the RHS must be even.
+    So, by the equality, $m^2$ is also even, which implies that $m$ is even and $n$ is odd.
+    We can write $m = 2k$ for some integer $k$ and substitute:
+
+    \[4k^2 = 12n^2\]
+
+    \[k^2 = 3n^2\]
+
+    We know that $n$ is odd, hence $3n^2$ is odd, which implies $k^2$ and $k$ are also odd. We can now express $k = 2j + 1$ and $n = 2l + 1$ for some integers $j, l$ and substitute:
+
+    \[\left(2j + 1\right)^2 = 3\left(2l + 1\right)^2\]
+
+    \[4j^2 + 4j + 1 = 3\left(4l^2 + 4l + 1\right)\]
+
+    \[4j^2 + 4j + 1 = 12l^2 + 12l + 3\]
+
+    \[4j^2 + 4j -  12l^2 - 12l = 2\]
+
+    \[4\left(j^2 + j - l^2 - l\right) = 2\]
+
+    This equality cannot hold because $4$ is not a multiple of $2$. Thus, $p$ must be irrational. $\rightarrow \leftarrow$
+
+    
+    
+    \item Prove Proposition 1.15.
+    
+    \item Let $E$ be a nonempty subset of an ordered set; suppose $x$ is a lower bound of $E$ and $\beta$ is an upper bound of $E$. Prove that $x \leq \beta$.
+    
+    \item Let $A$ be a nonempty set of real numbers which is bounded below. Let $-A$ be the set of all numbers $-x$, where $x \in A$. Prove that
+    \[
+    \inf A = -\sup(-A).
+    \]
+\end{enumerate}
+
 
 \end{document}
