@@ -58,12 +58,117 @@
     
     \item Prove Proposition 1.15.
     
+     $\textbf{Answer:}$ We want to prove the following statements that follow from the axioms of multiplication:
+
+     \begin{itemize}
+        \item If $x \neq 0$ and $xy = xz$ then $y = z$.
+        
+        \[xy = xz\]
+
+        \[x^{-1}\left(xy\right) = x^{-1}\left(xz\right) \hspace{0.5cm} \text{Existence of an inverse element}\]
+
+        \[\left(x^{-1}x\right)y = \left(x^{-1}x\right)z \hspace{0.5cm} \text{Associativity}\]
+
+        \[(1)y = (1)z \hspace{0.5cm} \text{Definition of inverse}\]
+
+        \[y = z \hspace{0.5cm} \text{Identity element}\]
+
+        \item If $x \neq 0$ and $xy = x$ then $y = 1$.
+        
+        \[xy = x\]
+
+        \[x^{-1}\left(xy\right) = x^{-1}\left(x\right) \hspace{0.5cm} \text{Existence of an inverse element}\]
+
+        \[\left(x^{-1}x\right)y = \left(x^{-1} x\right) \hspace{0.5cm} \text{Associativity}\]
+
+        \[(1)y = 1 \hspace{0.5cm} \text{Definition of inverse}\]
+
+        \[y = 1 \hspace{0.5cm} \text{Identity element}\]
+
+        \item If $x \neq 0$ and $xy = 1$ then $y = x^{-1}$.
+        
+        \[xy = 1\]
+
+        \[x^{-1}\left(xy\right) = x^{-1}\left(1\right) \hspace{0.5cm} \text{Existence of an inverse element}\]
+
+        \[\left(x^{-1} x\right) y = x^{-1} \hspace{0.5cm} \text{Associativity, identity element}\]
+
+        \[(1)y = x^{-1} \hspace{0.5cm} \text{Definition of inverse}\]
+
+        \[y = x^{-1} \hspace{0.5cm} \text{Identity element}\]
+
+        \item If $x \neq 0$ then $\frac{1}{x^{-1}} = x$.
+        
+        \[\frac{1}{x^{-1}} = x\]
+
+        \[x^{-1}\left(\frac{1}{x^{-1}}\right) = \left(x^{-1}x\right) \hspace{0.5cm} \text{Multiply by } x^{-1}\]
+
+        \[1 = 1 \hspace{0.5cm} \text{Definition of inverse}\]
+
+     \end{itemize}
+    
     \item Let $E$ be a nonempty subset of an ordered set; suppose $x$ is a lower bound of $E$ and $\beta$ is an upper bound of $E$. Prove that $x \leq \beta$.
+    
+    $\textbf{Answer:}$ By Definition 1.7, since $\beta$ is an upper bound, then this must imply that $\alpha \leq \beta$ for all $\alpha \in E$. Simiarily, since $x$ is
+    a lower bound, then this also must imply that $x \leq \alpha$ for all $\alpha \in E$. Hence, $x \leq \alpha \leq \beta$ and $x \leq \beta$ as desired.
     
     \item Let $A$ be a nonempty set of real numbers which is bounded below. Let $-A$ be the set of all numbers $-x$, where $x \in A$. Prove that
     \[
     \inf A = -\sup(-A).
     \]
+
+    $\textbf{Answer:}$  Denote $\alpha = \inf A$. By definition 1.8, $\alpha$ is a lower bound of $A$ and no $x > \alpha$ is a lower bound of $A$.
+    So, $\alpha \leq x, \forall x \in A$ implies $-\alpha \geq -x$ for $-x \in -A$, 
+    which means $\alpha$ is an upper-bound of of $-A$. In order to show $-\alpha$ is the $\textit{least}$ upper bound of $-A$,
+    take some $\beta < -\alpha$, which implies $-\beta > \alpha$. Since $\alpha = \inf A$, there exists some $x \in A$
+    such that $\alpha < x < -\beta$ and $-x > \beta$, which implies $\beta$ is not an upper bound of $-A$. Hence, $-\alpha = \sup(-A)$ and $\alpha = -\sup(-A)$.
+    
+        \item Fix $b > 1$.
+    \begin{enumerate}
+        \item If $m, n, p, q$ are integers, $n > 0$, $q > 0$, and $r = m/n = p/q$, prove that
+        \[
+            (b^m)^{1/n} = (b^p)^{1/q}.
+        \]
+        Hence it makes sense to define $b^r = (b^m)^{1/n}$.
+
+        \item Prove that $b^{r+s} = b^r b^s$ if $r$ and $s$ are rational.
+
+        \item If $x$ is real, define $B(x)$ to be the set of all numbers $b^r$, where $r$ is rational and $r \leq x$. Prove that
+        \[
+            b^x = \sup B(x)
+        \]
+        when $r$ is rational. Hence it makes sense to define $b^x = \sup B(x)$ for every real $x$.
+
+        \item Prove that $b^{x+y} = b^x b^y$ for all real $x$ and $y$.
+    \end{enumerate}
+
+    \item Fix $b > 1$, $y > 0$, and prove that there is a unique real $x$ such that $b^x = y$, by completing the following outline. (This is called the \emph{logarithm of $y$ to the base $b$}.)
+    \begin{enumerate}
+        \item For any positive integer $n$, $b^n - 1 \geq n(b - 1)$.
+
+        \item Hence $b - 1 \geq n(b^{1/n} - 1)$.
+
+        \item If $t > 1$ and $n > (b - 1)/(t - 1)$, then $b^{1/n} < t$.
+
+        \item If $w$ is such that $b^{-x} < y$, then $b^{1/n} x < y$ for sufficiently large $n$; to see this, apply part (c) with $t = y \cdot b^x$.
+
+        \item If $b^r > y$, then $b^{r - (1/n)} > y$ for sufficiently large $n$.
+
+        \item Let $A$ be the set of all $w$ such that $b^w < y$, and show that $x = \sup A$ satisfies $b^x = y$.
+
+        \item Prove that this $x$ is unique.
+    \end{enumerate}
+
+    \item Prove that no order can be defined in the complex field that turns it into an ordered field. \emph{Hint:} $-1$ is a square.
+
+    \item Suppose $z = a + bi$, $w = c + di$. Define $z < w$ if $a < c$, and also if $a = c$ but $b < d$. Prove that this turns the set of all complex numbers into an ordered set. (This type of order relation is called a \emph{dictionary order}, or \emph{lexicographic order}, for obvious reasons.) Does this ordered set have the least-upper-bound property?
+
+    \item Suppose $z = a + bi$, $w = u + iv$, and
+    \[
+        a = \left( \frac{|w| + u}{2} \right)^{1/2}, \quad b = \left( \frac{|w| - u}{2} \right)^{1/2}.
+    \]
+    Prove that $z^2 = w$ if $v \geq 0$ and that $(\bar{z})^2 = w$ if $v \leq 0$. Conclude that every complex number (with one exception!) has two complex square roots.
+    
 \end{enumerate}
 
 
